@@ -1,28 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect } from 'react';
 
 export const NavBar = () => {
-  const [Nav, setNav] = useState(false);
-  const [isShownHoverContent, setIsShownHoverContent] = useState(false);
+  // const [Nav, setNav] = useState(false);
+  // const [isShownHoverContent, setIsShownHoverContent] = useState(false);
 
   function navToggle() {
-    const btn = document.getElementById("menuBtn");
-    const nav = document.getElementById("menu");
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('menu');
 
-    btn?.classList.toggle("open");
-    nav?.classList.toggle("flex");
-    nav?.classList.toggle("hidden");
+    btn?.classList.toggle('open');
+    nav?.classList.toggle('flex');
+    nav?.classList.toggle('hidden');
   }
   useEffect(() => {
-    const nav = document.getElementById("site-menu");
-    const header = document.getElementById("top");
-    window.addEventListener("scroll", function () {
+    const nav = document.getElementById('site-menu');
+    const header = document.getElementById('top');
+    window.addEventListener('scroll', function () {
       if (window.scrollY >= 400) {
         // adjust this value based on site structure and header image height
-        nav?.classList.add("nav-sticky");
-        header?.classList.add("pt-scroll");
+        nav?.classList.add('nav-sticky');
+        header?.classList.add('pt-scroll');
       } else {
-        nav?.classList.remove("nav-sticky");
-        header?.classList.remove("pt-scroll");
+        nav?.classList.remove('nav-sticky');
+        header?.classList.remove('pt-scroll');
       }
     });
     return () => {};
@@ -81,7 +81,7 @@ export const NavBar = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{' '}
               </svg>
             </button>
             <div className="dropdown-menu absolute hidden">
@@ -134,7 +134,7 @@ export const NavBar = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{' '}
               </svg>
             </button>
             <div className="dropdown-menu absolute hidden">
@@ -187,7 +187,7 @@ export const NavBar = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{' '}
               </svg>
             </button>
             <div className="dropdown-menu absolute hidden">

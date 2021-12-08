@@ -1,5 +1,4 @@
-import React from "react";
-import { AppConfig } from "../utils/AppConfig";
+import React from 'react';
 
 function Footer() {
   return (

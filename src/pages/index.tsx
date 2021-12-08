@@ -1,26 +1,26 @@
-import { Meta } from "../layout/Meta";
-import { Main } from "../templates/Main";
-import { useState } from "react";
-import { AppConfig } from "./../utils/AppConfig";
-import { DomainData } from "./../interface/domain";
-import { GetStaticPropsContext } from "next";
-import { getHostingPages } from "./../config/notion";
+import { useState } from 'react';
+
+import { getHostingPages } from '../config/notion';
+import { DomainData } from '../interface/domain';
+import { Meta } from '../layout/Meta';
+import { Main } from '../templates/Main';
+import { AppConfig } from '../utils/AppConfig';
 
 const Index = () => {
-  const [domainName, setdomainName] = useState("");
-  const [error, seterror] = useState("");
+  const [domainName, setdomainName] = useState('');
+  const [error, seterror] = useState('');
   const [domainData, setdomainData] = useState<DomainData>();
-  let getDomainDetails = async () => {
-    var patt = new RegExp(AppConfig.regex.domain).test(domainName);
+  const getDomainDetails = async () => {
+    const patt = new RegExp(AppConfig.regex.domain).test(domainName);
     console.log(patt);
     if (patt) {
-      let data = await fetch(
+      const data = await fetch(
         `http://localhost:3000/api/domain?domainQuery=${domainName}`
       ).then((e) => e.json());
       setdomainData(data);
       console.log(data);
-    } else if (patt == false || patt == null) {
-      seterror("Enter Valid url!!");
+    } else if (patt === false || patt === null) {
+      seterror('Enter Valid url!!');
     }
   };
   return (
@@ -52,22 +52,22 @@ const Index = () => {
             className="lg:absolute  leading-loose text-gray-500 text-xl md:m-auto font-bold"
             style={{ width: "608px", left: 0, top: "40px" }}
           >
-            Host your Website on CLOUD Hosting
+            {`Host your Website on CLOUD Hosting`}
           </p>
           <p
             className=" lg:absolute leading-10 text-gray-800 font-bold text-4xl mx-0 mt-0 mb-6 p-0 tracking-normal md:justify-center md:mx-auto md:mt-0 md:mb-6 lg:text-5xl"
             style={{ width: "608px", left: 0, top: "80px" }}
           >
-            That's Faster,Secure &amp;{/* */}{" "}
+            {` That's Faster,Secure &amp;`}
             <span className="text-indigo-400">fully managed.</span>
           </p>
           <p
             className="lg:absolute text-base leading-loose text-gray-500 font-medium"
             style={{ width: "608px", left: 0, top: "170px" }}
           >
-            Our managed cloud services make sure that your website is fast,
+            {`Our managed cloud services make sure that your website is fast,
             secure &amp; always up so visitors and search engines trust you.
-            Starting from $2.00 per month.
+            Starting from $2.00 per month.`}
           </p>
           <div
             className="lg:absolute hidden lg:block right-0 top-0 bg-gray-200 rounded-3xl"
@@ -443,15 +443,7 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             <div className="w-full bg-white rounded-lg  flex-col justify-center items-center shadow">
               <div className="mb-8">
-                <iframe
-                  height="200"
-                  className="w-full"
-                  src="https://www.youtube.com/embed/HdxpZSDnsyY"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <img src="/yt.jpg" alt="" />
               </div>
               <div className="text-center">
                 <p className="text-xl text-gray-700 font-bold mb-2">
@@ -462,15 +454,7 @@ const Index = () => {
             </div>
             <div className="w-full bg-white rounded-lg   flex-col justify-center items-center shadow">
               <div className="mb-8">
-                <iframe
-                  height="200"
-                  className="w-full"
-                  src="https://www.youtube.com/embed/NPUe1nXr-Zw"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <img src="/yt2.jpg" alt="" />
               </div>
               <div className="text-center">
                 <p className="text-xl text-gray-700 font-bold mb-2">
@@ -481,21 +465,13 @@ const Index = () => {
             </div>
             <div className="w-full bg-white rounded-lg   flex-col justify-center items-center shadow">
               <div className="mb-8">
-                <iframe
-                  height="200"
-                  className="w-full"
-                  src="https://www.youtube.com/embed/0DBb5igcsg0"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <img src="/rec.jpg" alt="" />
               </div>
               <div className="text-center">
                 <p className="text-xl text-gray-700 font-bold mb-2">
-                  Technical Yogi
+                 {`See More >>`}
                 </p>
-                <p className="text-base text-gray-400 font-normal">Youtuber</p>
+                {/* <p className="text-base text-gray-400 font-normal">Youtuber</p> */}
               </div>
             </div>
           </div>
@@ -531,7 +507,7 @@ const Index = () => {
     </Main>
   );
 };
-export async function getStaticProps(context: GetStaticPropsContext) {
+export async function getStaticProps() {
   const project = await getHostingPages();
   console.log(project);
   if (!project) {
