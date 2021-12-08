@@ -507,20 +507,20 @@ const Index = () => {
     </Main>
   );
 };
-export async function getStaticProps() {
-  const project = await getHostingPages();
-  console.log(project);
-  if (!project) {
-    return {
-      notFound: true,
-    };
-  }
-  return {
-    props: {
-      project,
-    },
-    revalidate: 10,
-  };
-}
+// export async function getStaticProps() {
+//   const project = await getHostingPages();
+//   console.log(project);
+//   if (!project) {
+//     return {
+//       notFound: true,
+//     };
+//   }
+//   return {
+//     props: {
+//       project,
+//     },
+//     revalidate: 10,
+//   };
+// }
 
 export default Index;
