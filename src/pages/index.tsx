@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import { getHostingPages } from '../config/notion';
 import { DomainData } from '../interface/domain';
 import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
