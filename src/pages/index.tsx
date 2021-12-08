@@ -47,23 +47,23 @@ const Index = () => {
           className="lg:relative w-full h-96"
           // style={{ width: "1232px", height: "520px" }}
         >
-          {" "}
+          {' '}
           <p
             className="lg:absolute  leading-loose text-gray-500 text-xl md:m-auto font-bold"
-            style={{ width: "608px", left: 0, top: "40px" }}
+            style={{ width: '608px', left: 0, top: '40px' }}
           >
             {`Host your Website on CLOUD Hosting`}
           </p>
           <p
             className=" lg:absolute leading-10 text-gray-800 font-bold text-4xl mx-0 mt-0 mb-6 p-0 tracking-normal md:justify-center md:mx-auto md:mt-0 md:mb-6 lg:text-5xl"
-            style={{ width: "608px", left: 0, top: "80px" }}
+            style={{ width: '608px', left: 0, top: '80px' }}
           >
             {` That's Faster,Secure &amp;`}
             <span className="text-indigo-400">fully managed.</span>
           </p>
           <p
             className="lg:absolute text-base leading-loose text-gray-500 font-medium"
-            style={{ width: "608px", left: 0, top: "170px" }}
+            style={{ width: '608px', left: 0, top: '170px' }}
           >
             {`Our managed cloud services make sure that your website is fast,
             secure &amp; always up so visitors and search engines trust you.
@@ -71,11 +71,11 @@ const Index = () => {
           </p>
           <div
             className="lg:absolute hidden lg:block right-0 top-0 bg-gray-200 rounded-3xl"
-            style={{ width: "504px", height: "400px" }}
+            style={{ width: '504px', height: '400px' }}
           />
           <div
             className="inline-flex items-center justify-center w-40 p-3 lg:absolute bg-indigo-500 shadow rounded-lg"
-            style={{ left: 0, top: "250px" }}
+            style={{ left: 0, top: '250px' }}
           >
             <button className="text-sm leading-normal text-white">
               GET STARTED NOW
@@ -127,7 +127,7 @@ const Index = () => {
                 </svg>
                 <span className="text-sm mr-1">Search</span>
               </button>
-            </div>{" "}
+            </div>{' '}
             <div className="flex font-bold space-x-10 text-white">
               <div>.COM only RS 199 </div> <div>.IN only Rs 299</div>
             </div>
@@ -283,10 +283,10 @@ const Index = () => {
                   Money-back Guarantee
                 </p>
                 <p className="text-sm">
-                  We offer a 30-day moneyback guarantee on all of our plans.
+                  {`We offer a 30-day moneyback guarantee on all of our plans.
                   We're extremely confident that you'll never need to find
                   another host after becoming a part of The AmbitionHost
-                  Experience!
+                  Experience!`}
                 </p>
               </div>
             </div>
@@ -308,9 +308,9 @@ const Index = () => {
               <div className="mt-8">
                 <p className="text-xl font-semibold my-2">Amazing support</p>
                 <p className="text-sm">
-                  We are more responsive on WhatsApp and voice call, for any
+                  {`We are more responsive on WhatsApp and voice call, for any
                   kind of support, message us. If you will email or open a
-                  ticket, then response time may be in some hours.
+                  ticket, then response time may be in some hours.`}
                 </p>
               </div>
             </div>
@@ -342,7 +342,7 @@ const Index = () => {
               <div className="mt-8">
                 <p className="text-xl font-semibold my-2">Reliable Price</p>
                 <p className="text-sm">
-                  {" "}
+                  {' '}
                   We are providing reliable price for all plans.
                 </p>
               </div>
@@ -410,7 +410,7 @@ const Index = () => {
             <button className="w-full text-indigo-700 border border-indigo-700 rounded hover:bg-indigo-700 hover:text-white hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4">
               Choose Plan
             </button>
-          </div>{" "}
+          </div>{' '}
           <div className="w-full md:w-1/3 bg-white rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 mb-10 md:mb-0">
             <h3 className="text-gray-600 text-lg">Enterprise</h3>
             <p className="text-gray-600 mt-1">
@@ -469,7 +469,7 @@ const Index = () => {
               </div>
               <div className="text-center">
                 <p className="text-xl text-gray-700 font-bold mb-2">
-                 {`See More >>`}
+                  {`See More >>`}
                 </p>
                 {/* <p className="text-base text-gray-400 font-normal">Youtuber</p> */}
               </div>

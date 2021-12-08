@@ -1,4 +1,3 @@
-
 function TermsOfServices() {
   return <div></div>;
 }
