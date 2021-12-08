@@ -14,7 +14,7 @@ const Index = () => {
     console.log(patt);
     if (patt) {
       const data = await fetch(
-        `http://localhost:3000/api/domain?domainQuery=${domainName}`
+        `https://hosting-beta.vercel.app/api/domain?domainQuery=${domainName}`
       ).then((e) => e.json());
       setdomainData(data);
       console.log(data);
